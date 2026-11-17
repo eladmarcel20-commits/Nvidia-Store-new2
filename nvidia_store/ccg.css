@@ -1,0 +1,759 @@
+
+
+
+body {
+  background: #101820;
+}
+
+/* ====== Hero Slider ======= */
+
+
+  
+/* Hero slider image */
+.hero-img {
+    height: 380px;
+    object-fit: cover;
+
+}
+
+/* Dark overlay to make text easier to read */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Text over the image */
+.carousel-caption {
+    z-index: 1;
+    bottom: 30%;
+    text-align: center;
+}
+
+.carousel-caption h1 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 16px;
+}
+
+
+/*  before and after buttons  */
+
+#before,#after {
+
+height: 30%;
+
+margin-top: 100px;
+
+
+
+}
+
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .hero-img {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        bottom: 20%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 28px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+}
+
+
+/* ======= SHOP ALL BTN ======= */
+
+
+.navbar {
+
+    background-color: #263238;
+}
+
+.show  {
+
+    background: #008000d9;
+   
+  
+    padding: 8px 9px;
+  border-radius: 7px;
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+    
+}
+#nav-BD {
+
+
+    background: #000c27;
+    border: 2px solid #76b900;
+    font-weight: bold;
+    color:white;
+}
+
+
+#nav-BD:hover {
+
+
+    background:#76b900 ;
+    border: 2px solid #000c27 ;
+    font-weight: bold;
+    color:rgb(3, 3, 3);
+}
+
+
+#button-v {
+
+    background-color: #202832;
+    border: 1px solid greenyellow;
+}
+
+
+#button-v:hover {
+
+     box-shadow: 0 0 15px rgba(118, 185, 0, 0.2);
+}
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 8px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px;
+    }
+
+}
+
+
+.container img {
+ margin-right: 5px;
+}
+
+
+
+#stores  {
+
+   padding:10px; 
+     gap: 20px;
+}
+
+#cartCount {
+
+    color:rgb(7, 160, 7);
+}
+
+
+/* ==== product banner =====*/
+
+.product-banner {
+
+    width: 100%;
+
+    padding-left: 30px;
+    color:white;
+}
+
+
+/* =================================
+   NVIDIA PRODUCT CARD
+================================= */
+
+.product-card {
+    width: 18rem;
+    height: 570px;
+
+    background: #363636;
+    border: 1px solid #263238;
+    border-radius: 8px;
+
+    padding: 0 !important;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    border-color: #76b900;
+    box-shadow: 0 0 15px rgba(117, 185, 0, 0.514);
+}
+
+
+/* =================================
+   BLUE TOP CONTAINER
+================================= */
+
+.top-card {
+    height: 30px;
+    min-height: 20px;
+
+    background-color: #1426b8;
+
+    display: flex;
+    align-items: center;
+  margin-top: 10px;
+    padding: 0 10px;
+
+    position: relative;
+}
+
+
+/* Discount Badge */
+
+.discount-badge {
+    background-color: #76b900;
+    color: black;
+  margin-left: auto;
+    font-size: 12px;
+    font-weight: bold;
+
+    padding: 1px 6px;
+    border-radius: 4px;
+}
+
+
+/* =================================
+   PRODUCT IMAGE
+================================= */
+
+.product-image {
+    height: 220px;
+    min-height: 220px;
+
+    margin: 10px;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =================================
+   PRODUCT INFORMATION
+================================= */
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+   
+}
+
+.product-brand {
+    color: #76b900;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+
+    min-height: 20px;
+}
+
+.product-card .card-title {
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    min-height: 44px;
+ display: -webkit-box;
+  
+    -webkit-box-orient: horizontal;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.product-card .card-text {
+    color: #b8c0cc;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    min-height: 60px;
+
+    margin-bottom: 12px;
+     display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* =================================
+   PRICE
+================================= */
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 8px;
+}
+
+.current-price {
+    color: rgb(255, 255, 255) !important;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.old-price {
+    color: #fc6894;
+
+    font-size: 13px;
+
+    text-decoration: line-through;
+}
+
+
+/* =================================
+   STOCK STATUS
+================================= */
+
+.stock {
+    color: #76b900;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =================================
+   ADD TO CART
+================================= */
+
+.product-card .add-to-cart {
+    background-color: #76b900;
+    color: black;
+
+    border: none;
+
+    font-weight: bold;
+
+    margin-top: auto;
+
+    padding: 10px;
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #8ed000;
+}
+
+
+
+/* ======= MOBIle Layout ====== */
+
+@media (max-width: 767px) {
+
+    /* Two product cards per row */
+    .store,
+    #stores {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px !important;
+
+        padding: 10px 14px;
+        justify-content: unset;
+        align-items: stretch;
+    }
+
+    /* Product card */
+    .product-card {
+        width: 100% !important;
+        height: auto !important;
+        min-width: 0;
+
+        background: #2d2d2d;
+        border: none;
+        border-radius: 3px;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 0 !important;
+        overflow: hidden;
+
+        transform: none;
+        box-shadow: none;
+    }
+
+    .product-card:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: transparent;
+    }
+
+    /* Badge area */
+    .top-card {
+        height: 35px;
+        min-height: 35px;
+
+        background: #2d2d2d;
+
+        margin: 0;
+        padding: 8px 10px;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .discount-badge {
+        background: #c8f7b5;
+        color: #008000;
+
+        font-size: 10px;
+        font-weight: bold;
+
+        padding: 4px 7px;
+        border-radius: 3px;
+    }
+
+    /* White product image container */
+    .product-image {
+        width: calc(100% - 24px);
+
+        height: clamp(120px, 38vw, 230px);
+        min-height: 0;
+
+        margin: 8px 12px 12px;
+
+        background: #ffffff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        padding: 5px;
+    }
+
+    /* Product information */
+    .product-card .card-body {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 0 12px 12px;
+    }
+
+    .product-brand {
+        color: #d0d0d0;
+
+        font-size: 10px;
+        font-weight: bold;
+
+        margin-bottom: 4px;
+        min-height: 0;
+    }
+
+    .product-card .card-title {
+        color: #eeeeee;
+
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.4;
+
+        margin-bottom: 8px;
+        min-height: 0;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+    }
+
+    .product-card .card-text {
+        color: #b8c0cc;
+
+        font-size: 10px;
+        line-height: 1.3;
+
+        margin-bottom: 8px;
+        min-height: 0;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+    }
+
+    /* Price */
+    .price {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: 5px;
+
+        margin-bottom: 8px;
+    }
+
+    .current-price {
+        color: #ffffff !important;
+
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .old-price {
+        color: #fc6894;
+
+        font-size: 10px;
+        text-decoration: line-through;
+    }
+
+    /* Stock */
+    .stock {
+        color: #76b900;
+
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    /* Add to cart */
+    .product-card .add-to-cart {
+        background: #76b900;
+        color: #101820;
+
+        border: none;
+        border-radius: 4px;
+
+        font-size: 11px;
+        font-weight: bold;
+
+        padding: 8px 4px;
+        margin-top: auto;
+    }
+}
+
+
+
+/* =========================
+   NVIDIA STORE FOOTER
+========================= */
+
+.nvidia-footer {
+    background: #0b1018;
+    color: #ffffff;
+    border-top: 2px solid #76B900;
+    margin-top: 0;
+    padding-top: 55px;
+    margin-top: 18px;
+}
+
+
+/* Footer Layout */
+
+.footer-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 7% 45px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+
+/* Brand Section */
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: white;
+
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.footer-brand p {
+    color: #a5a5a5;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Social Icons */
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.footer-socials a {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #1b232d;
+    border: 1px solid #303b45;
+    border-radius: 50%;
+
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    background: #76B900;
+    color: #101820;
+    border-color: #76B900;
+}
+
+
+/* Footer Columns */
+
+.footer-column h4 {
+    color: #76B900;
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #a5a5a5;
+    font-size: 13px;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #76B900;
+    padding-left: 5px;
+}
+
+
+/* Footer Bottom */
+
+.footer-bottom {
+    background: #080c12;
+    border-top: 1px solid #202832;
+
+    padding: 20px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-bottom p {
+    color: #777777;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* Responsive Footer */
+
+@media (max-width: 992px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

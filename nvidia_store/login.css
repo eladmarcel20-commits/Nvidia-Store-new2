@@ -1,0 +1,221 @@
+* {
+
+ box-sizing: border-box;
+ margin: 0%;
+ padding: 0;
+
+}
+
+        body {
+               background: #101820;
+     
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ==== from logo === */ 
+
+        .logo {
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-card {
+            background-color: #1b252ed7;
+             backdrop-filter: blur(2px);
+            border: 1px solid #303b45;
+            border-radius: 15px;
+            padding: 50px;
+            width: 100%;
+            min-height: 68vh;
+            max-width: 450px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-card h1 {
+            
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid white ;
+        }
+
+        .login-card p {
+            color: #eff2f5;
+            text-align: start;
+            margin-bottom: 30px;
+        }
+
+        .form-control {
+            background-color: #101820;
+            border: 1px solid #303b45;
+            color: white;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            background-color: #101820;
+            color: white;
+            border-color: #76B900;
+            box-shadow: 0 0 5px #88d00b65;
+        }
+
+        .form-control::placeholder {
+            color: #aab2ba;
+            font-style: oblique;
+        }
+        
+
+        .password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 65px;
+}
+
+.show-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: none;
+    border: none;
+
+    color: #76B900;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.show-password:hover {
+    color: #91e000;
+}
+
+
+/* =====  remember & forgot  button ====== */
+
+.contain {
+
+    width: 100%;
+    max-height: 3vh;
+
+     
+    display: flex;
+    flex-direction: row;
+  
+  
+
+}
+
+.contain label {
+
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      cursor: pointer;
+}
+
+.forgot {
+ 
+    margin-left: auto;
+   text-decoration: none;
+   color:white;
+}
+
+.forgot:hover {
+
+   text-decoration: underline;
+   color:#76B900;
+}
+
+
+
+  
+    
+
+
+.remember input {
+  
+    background-color: #303b45;
+    display: flex;
+    align-items: center;
+    align-self: end;
+    
+}
+
+
+        .login-btn {
+            background-color: #75b90079;
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            transition: 0.3s;
+            margin-top: 3rem;
+        }
+
+        .login-btn:hover {
+            background-color: #8bd600;
+              color: rgba(7, 7, 7, 0.967);
+        }
+
+        .register-link {
+            color: #76B900;
+            margin-top: 3rem;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* ===== form success ==== */
+
+        #result {
+             display: none;
+            background: #75b90032;
+            backdrop-filter: blur(2px);
+            font-size: larger;
+            width: 90%;
+            text-align: center;
+            border-radius: 2px;
+            border-bottom:2px solid #eff2f5 ;
+               border-top:2px solid #eff2f5 ;
+               margin: 0% auto;
+        }
+
+        /* ==== errorr login =====*/
+
+        .login-error {
+    color: #ff4d4d;
+    background: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-success {
+    color: #76B900;
+    background: rgba(118, 185, 0, 0.15);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}

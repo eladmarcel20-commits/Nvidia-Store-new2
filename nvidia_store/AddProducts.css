@@ -1,0 +1,224 @@
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.dashboard-layout {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 222px;
+    min-width: 222px;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 0 18px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: linear-gradient(
+        180deg,
+        rgba(18, 24, 29, 0.96),
+        rgba(12, 17, 21, 0.94)
+    );
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+}
+
+.sidebar-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 132px;
+    padding: 0 12px 20px;
+    text-align: center;
+}
+
+.sidebar-logo img {
+    width: 76px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.sidebar-logo h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.sidebar-logo h2 span {
+    color: var(--nvidia-green);
+ 
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sidebar-nav a,
+.sidebar .logout {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 64px;
+    padding: 0 24px;
+    color: #c5cdd6;
+    text-decoration: none;
+    font-size: 16px;
+    border-left: 3px solid transparent;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    min-width: 24px;
+    font-size: 23px;
+    line-height: 1;
+}
+
+.sidebar-nav a:hover,
+.sidebar .logout:hover {
+    color: white;
+    background: rgba(118, 185, 0, 0.09);
+}
+
+.sidebar-nav a.active {
+    color: var(--nvidia-green);
+    background: linear-gradient(
+        90deg,
+        rgba(118, 185, 0, 0.24),
+        rgba(118, 185, 0, 0.10)
+    );
+    border-left-color: var(--nvidia-green);
+    border-radius: 0 10px 10px 0;
+    font-weight: 600;
+}
+
+.sidebar-divider {
+    height: 1px;
+    margin: 24px 22px;
+    background: #29323a;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+}
+
+
+/* =========================
+   ADD PRODUCT CONTENT
+========================= */
+
+.dashboard-main {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px 30px 20px;
+}
+
+
+/* =========================
+   RESPONSIVE SIDEBAR
+========================= */
+
+@media (max-width: 800px) {
+    .dashboard-layout {
+        gap: 14px;
+        padding: 12px;
+    }
+
+    .sidebar {
+        width: 76px;
+        min-width: 76px;
+        padding-top: 12px;
+    }
+
+    .sidebar-logo {
+        min-height: 88px;
+    }
+
+    .sidebar-logo img {
+        width: 48px;
+        height: 42px;
+    }
+
+    .sidebar-logo h2 {
+        display: none;
+    }
+
+    .sidebar-nav a,
+    .sidebar .logout {
+        justify-content: center;
+        gap: 0;
+        padding: 0 8px;
+        font-size: 0;
+    }
+
+    .nav-icon {
+        font-size: 24px;
+    }
+
+    .sidebar-divider {
+        margin: 18px 12px;
+    }
+}
+
+@media (max-width: 560px) {
+    .dashboard-layout {
+        display: block;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+        margin-bottom: 16px;
+        padding: 8px;
+        border-radius: 14px;
+    }
+
+    .sidebar-logo {
+        min-height: 55px;
+        padding: 0 0 8px;
+    }
+
+    .sidebar-logo img {
+        width: 42px;
+        height: 35px;
+        margin: 0;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .sidebar-nav a,
+    .sidebar .logout {
+        min-height: 46px;
+        flex: 1;
+        border-left: 0;
+        border-radius: 8px;
+    }
+
+    .sidebar .logout {
+        margin-top: 6px;
+    }
+
+    .sidebar-divider {
+        display: none;
+    }
+
+    .dashboard-main {
+        padding: 8px 2px 24px;
+    }
+}
